@@ -1612,6 +1612,7 @@ function dropletModeForMimeType(mimeType) {
     'text/coffeescript': 'coffee',
     'text/javascript': 'javascript',
     'text/html': 'html',
+    'text/css': 'css',
   }[mimeType];
   if (!result) {
     result = 'coffee';
@@ -1632,6 +1633,9 @@ function paletteForPane(paneState, selfname) {
     }
     if (mimeType == 'text/html') {
       basePalette = palette.HTML_PALETTE;
+    }
+    if (mimeType == 'text/css') {
+      basePalette = palette.CSS_PALETTE;
     }
   }
   if (basePalette) {
@@ -1671,6 +1675,9 @@ function updatePaneTitle(pane) {
       label = 'code';
       if (/^text\/html/.test(paneState.mimeType)) {
         label = 'html'
+      }
+      else if (/^text\/css/.test(paneState.mimeType)) {
+        label = 'css'
       }
       if (mimeTypeSupportsBlocks(paneState.mimeType)) {
         textonly = false;
@@ -2061,7 +2068,7 @@ function showPaneEditorLanguagesDialog(pane) {
       }
       if (state.css != hasCss) {
         if (state.css) {
-          setupSubEditor(box, pane, paneState, '', 'css');
+          setupDropletSubEditor(box, pane, paneState, '', 'css', null, true);
         } else {
           tearDownSubEditor(box, pane, paneState, 'css');
         }
@@ -2457,7 +2464,7 @@ function setPaneEditorData(pane, doc, filename, useblocks) {
   }
 
   if (box.find('.cssmark').is(':visible')) {
-    setupSubEditor(box, pane, paneState, meta.css, 'css');
+    setupDropletSubEditor(box, pane, paneState, meta.css, 'css', null, useblocks);
   }
 
   paneState.settingUp = null;
@@ -2725,7 +2732,7 @@ function setupAceEditor(pane, elt, editor, mode, text) {
 }
 
 function mimeTypeSupportsBlocks(mimeType) {
-  return /x-pencilcode|coffeescript|javascript|html/.test(mimeType);
+  return /x-pencilcode|coffeescript|javascript|html|css/.test(mimeType);
 }
 
 function setPaneEditorLanguageType(pane, type) {

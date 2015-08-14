@@ -734,6 +734,7 @@ module.exports = {
       ])
     }
   ],
+
   HTML_PALETTE: [
     {
       name: "Metadata",
@@ -937,6 +938,193 @@ module.exports = {
           block: "<option></option>",
           expansion: "<option value=\"\"></option>",
           title: "Option in a <select> list"
+        }
+      ]
+    }
+  ],
+
+  CSS_PALETTE: [
+    {
+      name: 'Rules',
+      color: 'lightblue',
+      blocks: [
+        {
+          block: 'a, div {\n  \n}',
+          title: 'CSS rule'
+        },
+        {
+          block: 'div.alternate',
+          title: 'class selector'
+        },
+        {
+          block: '#mainCanvas',
+          title: 'id selector'
+        },
+        {
+          block: 'a[target=_blank]',
+          title: 'Attribute selector'
+        },
+        {
+          block: 'a > div',
+          title: 'Selector combinator'
+        }
+      ]
+    }, {
+      name: 'Font',
+      color: 'orange',
+      blocks: [
+        {
+          block: 'font-family: sans-serif;',
+          title: 'Change font style or family'
+        },
+        {
+          block: 'font-size: 2em;',
+          title: 'Font size in absolute terms'
+        },
+        {
+          block: 'font-size: 70%;',
+          title: 'Font size in relative to original size'
+        },
+        {
+          block: 'font-size: medium;',
+          title: 'Font size in english terms'
+        },
+        {
+          block: 'font-weight: bold;',
+          title: 'Font width'
+        },
+        {
+          block: 'font-weight: 500;',
+          title: 'Fine tuning for font width'
+        },
+        {
+          block: 'font-style: italics;',
+          title: 'Italicize/Oblique font'
+        },
+        {
+          block: 'text-transform: uppercase;',
+          title: 'Case transform text'
+        },
+        {
+          block: 'color: red;',
+          title: 'Specify text color'
+        },
+        {
+          block: 'color: #ff0000;',
+          title: 'Hexadecimal color value'
+        },
+        {
+          block: 'text-decoration: underline;',
+          title: 'Specify additional text decoration'
+        }
+      ]
+    }, {
+      name: 'Block',
+      color: 'purple',
+      blocks: [
+        {
+          block: 'line-height: 11px;',
+          title: 'Height of line containing text'
+        },
+        {
+          block: 'vertical-align: middle;',
+          title: 'Vertical alignment in inline elements'
+        },
+        {
+          block: 'text-align: center;',
+          title: 'Align text in horizontal center'
+        },
+        {
+          block: 'word-spacing: 0.5em;',
+          title: 'Change spacing b/w words'
+        },
+        {
+          block: 'letter-spacing: -0.15em;',
+          title: 'Increase/Decrease letter spacing compared to original'
+        }
+      ]
+    }, {
+      name: 'Background',
+      color: 'lightgreen',
+      blocks: [
+        {
+          block: 'background-color: green;',
+          title: 'Specify background color'
+        },
+        {
+          block: 'background-image: url;',
+          expansion: 'background-image: url(\'turtle.png\')',
+          title: 'Put an image in the background'
+        },
+        {
+          block: 'background-repeat: repeat-x;',
+          title: 'Repeat the background in any direction'
+        },
+        {
+          block: 'background-position: center top;',
+          title: 'Align background'
+        }
+      ]
+    }, {
+      name: 'Layout',
+      color: 'pink',
+      blocks: [
+        {
+          block: 'float: left;',
+          title: 'Shift an element to left or right'
+        },
+        {
+          block: 'z-index: 10;',
+          title: 'Specify stack order for an element'
+        },
+        {
+          block: 'clear: left;',
+          title: 'Clear the float property'
+        },
+        {
+          block: 'visibility: visible;',
+          title: 'Change visibility of a rendered box'
+        },
+        {
+          block: 'display: none;',
+          title: 'Change rendering of a box'
+        },
+        {
+          block: 'cursor: help;',
+          title: 'Change cursor icon'
+        },
+        {
+          block: 'overflow: scroll;',
+          title: 'How to handle extra if content overflows box'
+        },
+        {
+          block: 'clip: rect(0px, 50px, 50px, 0px);',
+          title: 'Clip a box'
+        }
+      ]
+    }, {
+      name: 'Table',
+      color: 'teal',
+      blocks: [
+        {
+          block: 'table-layout: fixed;',
+          title: 'Set table layout algorithm'
+        },
+        {
+          block: 'border-collape: collapse;',
+          title: 'Collapse table corders into a single border'
+        },
+        {
+          block: 'border-spacing: 10px 50px;',
+          title: 'Change padding b/w borders'
+        },
+        {
+          block: 'empty-cells: hide;',
+          title: 'Show or hide empty cells'
+        },
+        {
+          block: 'caption-side: bottom;',
+          title: 'Place table caption at top/bottom'
         }
       ]
     }
