@@ -1023,6 +1023,15 @@ module.exports = {
       color: 'purple',
       blocks: [
         {
+          block: "padding: 10px;",
+          expansion: "padding: 10px 10px 10px 10px;",
+          title: "Set padding in all four directions"
+        },
+        {
+          block: "margin: 2% 5% 2% 5%;",
+          title: "Set margins"
+        },
+        {
           block: 'line-height: 11px;',
           title: 'Height of line containing text'
         },
@@ -1048,6 +1057,15 @@ module.exports = {
       color: 'lightgreen',
       blocks: [
         {
+          block: 'background: #00ff00;',
+          expansion: 'background: #00ff00 url("smiley.gif") no-repeat fixed center;',
+          title: 'Set all background properties'
+        },
+        {
+          block: 'background-attachment: fixed;',
+          title: 'Fix/scroll background image'
+        },
+        {
           block: 'background-color: green;',
           title: 'Specify background color'
         },
@@ -1057,8 +1075,8 @@ module.exports = {
           title: 'Put an image in the background'
         },
         {
-          block: 'background-repeat: repeat-x;',
-          title: 'Repeat the background in any direction'
+          block: 'background-repeat: repeat;',
+          title: 'Repeat the background image'
         },
         {
           block: 'background-position: center top;',
@@ -1074,10 +1092,6 @@ module.exports = {
           title: 'Shift an element to left or right'
         },
         {
-          block: 'z-index: 10;',
-          title: 'Specify stack order for an element'
-        },
-        {
           block: 'clear: left;',
           title: 'Clear the float property'
         },
@@ -1090,6 +1104,10 @@ module.exports = {
           title: 'Change rendering of a box'
         },
         {
+          block: 'z-index: 10;',
+          title: 'Specify stack order for an element'
+        },
+        {
           block: 'cursor: help;',
           title: 'Change cursor icon'
         },
@@ -1098,8 +1116,37 @@ module.exports = {
           title: 'How to handle extra if content overflows box'
         },
         {
-          block: 'clip: rect(0px, 50px, 50px, 0px);',
+          block: 'clip: rect(_);',
+          expansion: 'clip: rect(0px, 50px, 50px, 0px);',
           title: 'Clip a box'
+        },
+        {
+          block: 'width: 50%;',
+          title: 'Set width of container box'
+        },
+        {
+          block: 'height: 700px;',
+          title: 'Height of container box'
+        },
+        {
+          block: 'left: 50px;',
+          title: 'Left offset'
+        },
+        {
+          block: 'right: 50px;',
+          title: 'Left offset'
+        },
+        {
+          block: 'top: 50px;',
+          title: 'Left offset'
+        },
+        {
+          block: 'bottom: 50px;',
+          title: 'Left offset'
+        },
+        {
+          block: 'position: absolute;',
+          title: 'Set absolute position or relative to parent'
         }
       ]
     }, {
@@ -1115,7 +1162,8 @@ module.exports = {
           title: 'Collapse table corders into a single border'
         },
         {
-          block: 'border-spacing: 10px 50px;',
+          block: 'border-spacing: 10;',
+          expansion: 'border-spacing: 10px 50px;',
           title: 'Change padding b/w borders'
         },
         {
@@ -1125,6 +1173,28 @@ module.exports = {
         {
           block: 'caption-side: bottom;',
           title: 'Place table caption at top/bottom'
+        }
+      ]
+    }, {
+      name: 'Borders',
+      color: 'indigo',
+      blocks: [
+        {
+          block: 'border: 5px solid red;',
+          title: 'Basic border properties'
+        },
+        {
+          block: 'border-color: red;',
+          expansion: 'border-color: red green blue pink;',
+          title: 'Set border colors'
+        },
+        {
+          block: 'border-style: solid;',
+          title: 'Border line type'
+        },
+        {
+          block: 'border-width: 15px;',
+          title: 'Border line width'
         }
       ]
     }
